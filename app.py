@@ -89,4 +89,4 @@ def deletarUsuario():
 
 
 Usuarios.create_table()
-app.run()
+app.run(port=8080)
