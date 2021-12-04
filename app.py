@@ -31,7 +31,7 @@ def inserirUsuario():
     return json.dumps({"id": usuario.id, "nome": usuario.nome, "email": usuario.email}), 200, {'ContentType': 'application/json'}
 
 
-@app.route('/api/v1/login')
+@app.route('/api/v1/login', methods=['GET', 'POST'])
 def login():
     json_data = request.get_json(force=True)
     try:
